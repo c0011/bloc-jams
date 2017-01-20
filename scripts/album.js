@@ -28,6 +28,21 @@ var albumMarconi = {
     ]
 };
 
+var albumThree = {
+    title: 'The Third',
+    artist: 'Thr33',
+    label: 'Records',
+    year: '1900',
+    albumArtUrl: 'assets/images/album_covers/18.png',
+    songs: [
+        { title: 'Hello', duration: '3:33' },
+        { title: 'World', duration: '3:00' },
+        { title: 'Three', duration: '3:21'},
+        { title: 'Two', duration: '3:14' },
+        { title: 'One', duration: '2:33'}
+    ]
+};
+
 var createSongRow = function(songNumber, songName, songLength) {
     var template =
         '<tr class="album-view-song-item">'
@@ -61,4 +76,24 @@ var setCurrentAlbum = function(album) {
 
 window.onload = function() {
     setCurrentAlbum(albumPicasso);
+    document.getElementsByClassName('album-cover-art')[0].addEventListener('click', function () {
+    setCurrentAlbum(albumMarconi);
+});
 };
+
+document.getElementsByClassName('album-cover-art')[0].addEventListener('click', function () {
+    setCurrentAlbum(albumThree);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
